@@ -4,7 +4,7 @@ using System.Security;
 
 public class TreeStructure : MonoBehaviour
 {
-    public static TeresaGrid levelGrid;// { get; private set; }
+    public static TeresaGrid levelGrid;
 
     public Node parentNode;
 
@@ -16,6 +16,7 @@ public class TreeStructure : MonoBehaviour
 
     private void Start()
     {
+       
         //cria o cubo e dá um tamanho
         GameObject startCube = GameObject.CreatePrimitive(PrimitiveType.Cube);
         startCube.transform.localScale = new Vector3(150, 1, 150);
@@ -27,8 +28,9 @@ public class TreeStructure : MonoBehaviour
                                                    transform.position.z + startCube.transform.localScale.z / 2);
 
         //cria uma grid do tamanho do cubo inicializada a 0 
-        levelGrid = new TeresaGrid(300, 300);
-        
+        levelGrid = new TeresaGrid(300,300);
+        levelGrid.Inicialize();
+      
 
         // indica o parent node
         parentNode = new Node();
@@ -44,8 +46,11 @@ public class TreeStructure : MonoBehaviour
         createRooms(parentNode);
 
         //connect the rooms
-       
-        roomCreatorT.connect(parentNode);
+
+
+        this.gameObject.AddComponent<RoomCreatorT>().connect(parentNode);
+
+        //roomCreatorT.connect(parentNode);
 
         //tidy up dungeon      Removes singles
         for (int k = 0; k < 5; k++)
@@ -58,7 +63,7 @@ public class TreeStructure : MonoBehaviour
                 }
             }
         }
-
+        
         createLevel();
     }
 
@@ -129,11 +134,11 @@ public class TreeStructure : MonoBehaviour
             {
                 switch (levelGrid[i, j])
                 {
-                    //case 0:
-                    //    Instantiate(Resources.Load("River"), new Vector3(transform.position.x - transform.localScale.x / 2
-                    //                                                         + i, transform.position.y + transform.localScale.y / 2,
-                    //                                                         transform.position.z - transform.localScale.z / 2 + j), Quaternion.identity);
-                    //  break;
+                    case 0:
+                        Instantiate(Resources.Load("River"), new Vector3(transform.position.x - transform.localScale.x / 2
+                                                                             + i, transform.position.y + transform.localScale.y / 2,
+                                                                             transform.position.z - transform.localScale.z / 2 + j), Quaternion.identity);
+                        break;
 
                     case 1:
                         Instantiate(Resources.Load("FloorTile"), new Vector3(transform.position.x - transform.localScale.x / 2
