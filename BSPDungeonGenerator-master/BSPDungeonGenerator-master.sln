@@ -1,7 +1,7 @@
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{6E69E14C-2495-78B6-CE31-D8546905FAB4}") = "BSPDungeonGenerator-master", "Assembly-CSharp.csproj", "{BF827A0E-36D9-BCD6-E0B1-7A69381A07BC}"
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BSPDungeonGenerator-master.CSharp", "BSPDungeonGenerator-master.CSharp.csproj", "{5879F710-06AA-4872-A1DC-42818EA220AC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,15 +9,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BF827A0E-36D9-BCD6-E0B1-7A69381A07BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BF827A0E-36D9-BCD6-E0B1-7A69381A07BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BF827A0E-36D9-BCD6-E0B1-7A69381A07BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BF827A0E-36D9-BCD6-E0B1-7A69381A07BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5879F710-06AA-4872-A1DC-42818EA220AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5879F710-06AA-4872-A1DC-42818EA220AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5879F710-06AA-4872-A1DC-42818EA220AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5879F710-06AA-4872-A1DC-42818EA220AC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
