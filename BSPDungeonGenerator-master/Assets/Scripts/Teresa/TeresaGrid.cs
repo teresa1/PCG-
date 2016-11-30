@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class TeresaGrid : MonoBehaviour {
 
@@ -8,7 +9,9 @@ public class TeresaGrid : MonoBehaviour {
 
     public int[,] grid { get; private set; }
     
-    public int this[int _x, int _y] { set { grid[_x, _y] = value; } get { return grid[_x, _y]; } }
+	public int this[int _x, int _y] { set { 
+			Debug.Log (String.Format("Setting {0},{1}", _x, _y));
+			grid[_x, _y] = value; } get { return grid[_x, _y]; } }
 
 
     public TeresaGrid(int gridWidth, int gridHeight)
