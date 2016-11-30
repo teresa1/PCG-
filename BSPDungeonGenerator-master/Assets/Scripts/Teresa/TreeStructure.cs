@@ -27,7 +27,7 @@ public class TreeStructure : MonoBehaviour
                                                    transform.position.z + startCube.transform.localScale.z / 2);
 
         //cria uma grid do tamanho do cubo inicializada a 0 
-        levelGrid = new TeresaGrid();
+        levelGrid = new TeresaGrid(150, 150);
         
 
         // indica o parent node
